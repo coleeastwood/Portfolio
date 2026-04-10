@@ -10,24 +10,31 @@ body {
   color: #FFFFFF;
 }
 
-/* FULL WIDTH HEADER */
+img {
+  display: block;
+  width: 100%;
+}
+
 .topbar {
   width: 100%;
   background-color: #252424;
+  color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 22px 30px;
 }
 
 .topbar h1 {
   font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* NAV */
 .nav-left,
 .nav-right {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -35,6 +42,7 @@ body {
 .nav-right a {
   color: #FFFFFF;
   text-decoration: none;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -43,7 +51,6 @@ body {
   text-decoration: underline;
 }
 
-/* FULL WIDTH GRID */
 .gallery {
   width: 100%;
   display: grid;
@@ -52,37 +59,41 @@ body {
   padding: 12px;
 }
 
-/* IMAGE CARDS */
 .project {
   position: relative;
+  display: block;
   background-color: #252424;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .project img {
   width: 100%;
-  height: 250px;
+  height: 260px;
   object-fit: cover;
   transition: 0.3s;
 }
 
-/* HOVER OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background-color: #252424;
+  color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   opacity: 0;
   transition: 0.3s;
+  padding: 20px;
 }
 
 .overlay p {
   font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* HOVER EFFECT */
 .project:hover img {
   opacity: 0.3;
 }
@@ -91,24 +102,43 @@ body {
   opacity: 0.9;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  .topbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .topbar {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 600px) {
+  .topbar {
+    padding: 18px 20px;
   }
 
   .topbar h1 {
     font-size: 1.5rem;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    font-size: 0.9rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project img {
+    height: 240px;
   }
 }
