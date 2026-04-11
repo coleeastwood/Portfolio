@@ -15,15 +15,11 @@ img {
   width: 100%;
 }
 
-/* page width */
-.page-wrap {
-  width: 100%;
-}
-
 /* header */
 .site-header {
   width: 100%;
-  padding: 12px 12px 0 12px;
+  margin: 0;
+  padding: 0;
 }
 
 .header-inner {
@@ -35,6 +31,7 @@ img {
   align-items: center;
   column-gap: 55px;
   padding: 18px 28px;
+  margin: 0;
 }
 
 .left-links {
@@ -105,10 +102,9 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 12px;
+  margin-top: 12px;
 }
 
-/* items */
 .portfolio-item {
   position: relative;
   aspect-ratio: 4 / 5;
@@ -268,13 +264,8 @@ img {
 
 /* mobile */
 @media screen and (max-width: 600px) {
-  .site-header {
-    padding: 10px 10px 0 10px;
-  }
-
   .portfolio-grid {
     grid-template-columns: 1fr;
-    padding: 10px;
   }
 
   .site-title {
