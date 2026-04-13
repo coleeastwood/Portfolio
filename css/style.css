@@ -30,7 +30,7 @@ img {
 
 .left-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 16px;
 }
@@ -56,7 +56,7 @@ img {
 
 .right-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 14px;
 }
@@ -102,7 +102,7 @@ img {
 .portfolio-item {
   position: relative;
   aspect-ratio: 4 / 5;
-  overflow: hidden;
+  overflow: visible;
   background-color: #000000;
   text-decoration: none;
   color: #FFFFFF;
@@ -113,11 +113,14 @@ img {
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08);
   opacity: 0.45;
+  z-index: 3;
 }
 
 /* LAYOUT */
@@ -183,6 +186,7 @@ img {
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 20px;
+  z-index: 2;
 }
 
 .overlay-content h2 {
@@ -307,21 +311,6 @@ img {
 
 .wide-photo img {
   aspect-ratio: 3 / 2;
-}
-
-.project-footer-nav {
-  text-align: center;
-  margin-top: 24px;
-}
-
-.project-back {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-back:hover {
-  text-decoration: underline;
 }
 
 /* TABLET */
