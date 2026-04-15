@@ -19,7 +19,6 @@ img {
   width: 100%;
 }
 
-/* HEADER */
 .site-header {
   width: 100%;
 }
@@ -262,13 +261,35 @@ img {
   object-fit: cover;
 }
 
-/* CLEAN PHOTO GRID */
-.photo-mixed-grid {
+/* PHOTOGRAPHY */
+.photo-section {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
 }
 
+.photo-vertical-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.photo-vertical-grid .media-card img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.photo-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.photo-horizontal-grid .media-card img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* CARDS */
 .media-card {
   display: block;
   width: 100%;
@@ -290,33 +311,6 @@ img {
 .media-card:hover img {
   transform: scale(1.02);
   opacity: 0.9;
-}
-
-/* 4x5 */
-.portrait-card {
-  grid-column: span 2;
-}
-
-.portrait-card img {
-  aspect-ratio: 4 / 5;
-}
-
-/* 3x2 */
-.wide-card {
-  grid-column: span 3;
-}
-
-.wide-card img {
-  aspect-ratio: 3 / 2;
-}
-
-/* full width */
-.full-wide-card {
-  grid-column: span 6;
-}
-
-.full-wide-card img {
-  aspect-ratio: 3 / 2;
 }
 
 /* LIGHTBOX */
@@ -357,6 +351,14 @@ img {
   .graphics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .photo-vertical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 900px) {
@@ -373,22 +375,35 @@ img {
     font-size: 2.1rem;
   }
 
-  .photo-mixed-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .header-inner {
+    grid-template-columns: 1fr auto 1fr;
+    column-gap: 16px;
+    padding: 18px 20px;
   }
 
-  .portrait-card,
-  .wide-card,
-  .full-wide-card {
-    grid-column: span 2;
+  .left-links {
+    gap: 14px;
+  }
+
+  .left-links a {
+    font-size: 0.95rem;
+  }
+
+  .right-links {
+    gap: 14px;
+  }
+
+  .right-links a {
+    width: 28px;
+    height: 28px;
   }
 }
 
 @media (max-width: 600px) {
   .header-inner {
     grid-template-columns: 1fr;
+    row-gap: 10px;
     text-align: center;
-    gap: 10px;
   }
 
   .left-links,
@@ -402,5 +417,25 @@ img {
 
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graphics-grid,
+  .photo-vertical-grid,
+  .photo-horizontal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left-links a {
+    font-size: 0.85rem;
+  }
+
+  .lightbox {
+    padding: 20px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 16px;
+    font-size: 2.2rem;
   }
 }
