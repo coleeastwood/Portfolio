@@ -54,6 +54,9 @@ img {
   font-family: "Allura", cursive;
   font-size: 4rem;
   white-space: nowrap;
+}
+
+.home-page .site-title {
   animation: slideUp 1s ease forwards;
 }
 
@@ -210,8 +213,9 @@ img {
   opacity: 0.9;
 }
 
-/* PROJECT PAGE */
-.project-page {
+/* PROJECT / ABOUT PAGES */
+.project-page,
+.about-page {
   width: 100%;
   padding: 20px 12px 32px;
 }
@@ -232,7 +236,8 @@ img {
   text-decoration: underline;
 }
 
-.project-intro {
+.project-intro,
+.about-content {
   max-width: 800px;
   margin: 0 auto 28px;
   text-align: center;
@@ -262,7 +267,7 @@ img {
 
 .project-text {
   max-width: 680px;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   font-size: 1rem;
   line-height: 1.65;
 }
