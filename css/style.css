@@ -783,6 +783,6 @@ img {
   object-fit: cover;
   transform: scale(1.08);
 }
-.shift-left img {
-  object-position: -35% center;
+.shift-right img {
+  object-position: 65% center;
 }
