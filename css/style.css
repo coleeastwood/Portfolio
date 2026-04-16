@@ -784,5 +784,5 @@ img {
   transform: scale(1.08);
 }
 .shift-left img {
-  object-position: 35% center;
+  object-position: -35% center;
 }
