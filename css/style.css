@@ -644,24 +644,23 @@ img {
   gap: 12px;
 }
 
-/* TOP 4 (full width evenly) */
+/* TOP 4 */
 .sg1 { grid-column: 1 / 4; }
 .sg2 { grid-column: 4 / 7; }
 .sg3 { grid-column: 7 / 10; }
 .sg4 { grid-column: 10 / 13; }
 
-/* 2 WIDES (same total width) */
+/* 2 WIDES */
 .sg5 { grid-column: 1 / 7; }
 .sg6 { grid-column: 7 / 13; }
 
-/* BOTTOM 5 */
-.sg7  { grid-column: 1 / 3; }
-.sg8  { grid-column: 3 / 5; }
-.sg9  { grid-column: 5 / 7; }
-.sg10 { grid-column: 7 / 9; }
-.sg11 { grid-column: 9 / 13; }
+/* BOTTOM 4 */
+.sg7  { grid-column: 1 / 4; }
+.sg8  { grid-column: 4 / 7; }
+.sg9  { grid-column: 7 / 10; }
+.sg10 { grid-column: 10 / 13; }
 
-/* IMAGE BEHAVIOR */
+/* IMAGE SIZING */
 .portrait-graphic img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -672,4 +671,103 @@ img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.football-graphics-grid,
+.gameday-photo-grid,
+.fall-photo-grid,
+.media-day-grid,
+.recruiting-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.portrait-graphic img,
+.portrait-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.wide-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* GRAPHICS */
+.fg1 { grid-column: 1 / 4; }
+.fg2 { grid-column: 4 / 7; }
+.fg3 { grid-column: 7 / 10; }
+.fg4 { grid-column: 10 / 13; }
+
+.fg5 { grid-column: 2 / 5; }
+.fg6 { grid-column: 5 / 9; }
+.fg7 { grid-column: 9 / 12; }
+
+/* GAMEDAY */
+.gd1 { grid-column: 1 / 4; }
+.gd2 { grid-column: 4 / 7; }
+.gd3 { grid-column: 7 / 10; }
+.gd4 { grid-column: 10 / 13; }
+
+.gd5 { grid-column: 1 / 5; }
+.gd6 { grid-column: 5 / 9; }
+.gd7 { grid-column: 9 / 13; }
+
+/* FALL */
+.f1 { grid-column: 1 / 4; }
+.f2 { grid-column: 4 / 7; }
+.f3 { grid-column: 7 / 10; }
+.f4 { grid-column: 10 / 13; }
+
+.f5 { grid-column: 1 / 5; }
+.f6 { grid-column: 5 / 9; }
+.f7 { grid-column: 9 / 13; }
+
+/* MEDIA DAY */
+.md1 { grid-column: 1 / 4; }
+.md2 { grid-column: 4 / 7; }
+.md3 { grid-column: 7 / 10; }
+
+.md4 { grid-column: 1 / 7; }
+.md5 { grid-column: 7 / 13; }
+
+.md6 { grid-column: 4 / 10; }
+
+/* RECRUITING */
+.r1 { grid-column: 1 / 7; }
+.r2 { grid-column: 7 / 13; }
+
+.r3 { grid-column: 1 / 5; }
+.r4 { grid-column: 5 / 9; }
+.r5 { grid-column: 9 / 13; }
+
+@media (max-width: 1100px) {
+  .football-graphics-grid,
+  .gameday-photo-grid,
+  .fall-photo-grid,
+  .media-day-grid,
+  .recruiting-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fg1, .fg2, .fg3, .fg4, .fg5, .fg6, .fg7,
+  .gd1, .gd2, .gd3, .gd4, .gd5, .gd6, .gd7,
+  .f1, .f2, .f3, .f4, .f5, .f6, .f7,
+  .md1, .md2, .md3, .md4, .md5, .md6,
+  .r1, .r2, .r3, .r4, .r5 {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .football-graphics-grid,
+  .gameday-photo-grid,
+  .fall-photo-grid,
+  .media-day-grid,
+  .recruiting-photo-grid {
+    grid-template-columns: 1fr;
+  }
 }
