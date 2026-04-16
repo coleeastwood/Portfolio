@@ -32,18 +32,6 @@ img {
   padding: 22px 30px;
 }
 
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  color: #FFFFFF;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
 .left-links {
   display: flex;
   justify-content: flex-start;
@@ -67,6 +55,7 @@ img {
   font-family: "Allura", cursive;
   font-size: 4rem;
   white-space: nowrap;
+  justify-self: center;
 }
 
 .home-page .site-title {
@@ -108,6 +97,28 @@ img {
 .right-links a:hover,
 .mobile-icons a:hover {
   opacity: 0.6;
+}
+
+.menu-toggle {
+  display: none;
+  width: 34px;
+  height: 26px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  justify-self: start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #FFFFFF;
 }
 
 .mobile-nav {
@@ -476,11 +487,26 @@ img {
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px 10px;
   }
 
   .feature-left,
   .feature-right {
     grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .top-small-1,
+  .top-small-2,
+  .top-small-3,
+  .top-small-4,
+  .bottom-small-1,
+  .bottom-small-2,
+  .bottom-small-3,
+  .bottom-small-4 {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .project-name {
@@ -499,24 +525,28 @@ img {
   }
 
   .menu-toggle {
-    display: block;
-    justify-self: start;
+    display: flex;
   }
 
   .site-title {
     font-size: 3rem;
+    justify-self: center;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
   .header-inner {
-    grid-template-columns: auto 1fr;
-    row-gap: 0;
-    text-align: left;
+    grid-template-columns: 34px 1fr 34px;
+    align-items: center;
+    padding: 16px 16px;
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
     justify-self: start;
   }
 
@@ -528,10 +558,17 @@ img {
   .site-title {
     font-size: 2.2rem;
     justify-self: center;
+    grid-column: 2 / 3;
   }
 
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .feature-left,
+  .feature-right {
+    grid-column: span 2;
   }
 
   .graphics-grid,
