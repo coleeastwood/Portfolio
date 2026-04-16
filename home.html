@@ -12,7 +12,11 @@
 <header class="site-header">
   <div class="header-inner">
 
-    <div class="left-links">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      MENU
+    </button>
+
+    <div class="left-links desktop-links">
       <a href="home.html">WORK</a>
       <a href="about.html">ABOUT</a>
       <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
@@ -23,7 +27,7 @@
       <a href="home.html">Cole Eastwood</a>
     </h1>
 
-    <div class="right-links">
+    <div class="right-links desktop-icons">
       <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
         <img src="images/instagram.png" alt="Instagram">
       </a>
@@ -35,6 +39,25 @@
       </a>
     </div>
 
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="home.html">WORK</a>
+    <a href="about.html">ABOUT</a>
+    <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+    <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
+
+    <div class="mobile-icons">
+      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://x.com/coleeastwood_" target="_blank" rel="noopener noreferrer">
+        <img src="images/x.png" alt="X">
+      </a>
+      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
   </div>
 </header>
 
@@ -50,7 +73,7 @@
     </div>
   </a>
 
-  <a href="project.html" class="portfolio-item top-small-1">
+  <a href="mensgolf.html" class="portfolio-item top-small-1">
     <img src="images/mensgolfgraphics.png" alt="Men's Golf">
     <div class="overlay">
       <div class="overlay-content">
@@ -141,6 +164,17 @@
   </a>
 
 </main>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+  });
+</script>
 
 </body>
 </html>
