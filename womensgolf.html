@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nebraska Women's Golf | Cole Eastwood</title>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="left-links desktop-links">
+      <a href="home.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank">RESUME</a>
+      <a href="https://gondola.cc/coleeastwood_" target="_blank">GONDOLA</a>
+    </div>
+
+    <h1 class="site-title">
+      <a href="home.html">Cole Eastwood</a>
+    </h1>
+
+    <div class="right-links desktop-icons">
+      <a href="#"><img src="images/instagram.png"></a>
+      <a href="#"><img src="images/x.png"></a>
+      <a href="#"><img src="images/linkedin.png"></a>
+    </div>
+
+  </div>
+</header>
+
+<main class="project-page">
+
+<section class="media-section">
+<p class="section-label">Graphics</p>
+
+<div class="graphics-grid ten-grid">
+
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic1.jpg"><img src="womensgolfimages/Graphic1.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic2.png"><img src="womensgolfimages/Graphic2.png"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic3.png"><img src="womensgolfimages/Graphic3.png"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic4.jpg"><img src="womensgolfimages/Graphic4.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic5.jpg"><img src="womensgolfimages/Graphic5.jpg"></button>
+
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic6.jpg"><img src="womensgolfimages/Graphic6.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic7.png"><img src="womensgolfimages/Graphic7.png"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic8.jpg"><img src="womensgolfimages/Graphic8.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic9.jpg"><img src="womensgolfimages/Graphic9.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic10.jpg"><img src="womensgolfimages/Graphic10.jpg"></button>
+
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic11.jpg"><img src="womensgolfimages/Graphic11.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic12.png"><img src="womensgolfimages/Graphic12.png"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic13.png"><img src="womensgolfimages/Graphic13.png"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic14.jpg"><img src="womensgolfimages/Graphic14.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Graphic15.jpg"><img src="womensgolfimages/Graphic15.jpg"></button>
+
+</div>
+</section>
+
+<section class="media-section">
+<p class="section-label">Photography</p>
+
+<div class="photo-section">
+
+<div class="photo-vertical-grid">
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo1.jpg"><img src="womensgolfimages/Photo1.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo2.jpg"><img src="womensgolfimages/Photo2.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo3.jpg"><img src="womensgolfimages/Photo3.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo4.jpg"><img src="womensgolfimages/Photo4.jpg"></button>
+</div>
+
+<div class="photo-horizontal-grid">
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo5.jpg"><img src="womensgolfimages/Photo5.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo6.jpg"><img src="womensgolfimages/Photo6.jpg"></button>
+<button class="media-card lightbox-trigger" data-image="womensgolfimages/Photo7.jpg"><img src="womensgolfimages/Photo7.jpg"></button>
+</div>
+
+</div>
+</section>
+
+<section class="media-section">
+<p class="section-label">Video</p>
+
+<div class="video-grid">
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="womensgolfimages/Video11.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="womensgolfimages/Video22.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+<button class="lightbox-close" id="lightbox-close">&times;</button>
+<img class="lightbox-image" id="lightbox-image">
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const img = document.getElementById("lightbox-image");
+
+document.querySelectorAll(".lightbox-trigger").forEach(btn=>{
+btn.onclick=()=>{lightbox.classList.add("show");img.src=btn.dataset.image;}
+});
+
+document.getElementById("lightbox-close").onclick=()=>lightbox.classList.remove("show");
+
+// VIDEO THUMBNAILS
+document.querySelectorAll("video").forEach(video=>{
+video.addEventListener("loadeddata",()=>{
+video.currentTime=0.5;
+video.addEventListener("seeked",()=>{
+let c=document.createElement("canvas");
+c.width=video.videoWidth;
+c.height=video.videoHeight;
+c.getContext("2d").drawImage(video,0,0);
+video.setAttribute("poster",c.toDataURL());
+},{once:true});
+});
+});
+</script>
+
+</body>
+</html>

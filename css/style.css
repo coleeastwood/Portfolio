@@ -593,3 +593,18 @@ img {
     font-size: 2.2rem;
   }
 }
+.nav-current {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.5;
+  cursor: default;
+  text-decoration: none;
+}
+
+.mobile-current {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
