@@ -786,3 +786,80 @@ img {
 .shift-right img {
   object-position: 65% center;
 }
+.mallards-page .video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+/* SODBUSTERS PAGE */
+
+.sodbusters-graphics-grid,
+.sodbusters-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.sodbusters-graphics-grid .media-card img:not([alt="Graphic Square"]),
+.sodbusters-photo-grid .media-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.sbg-square {
+  grid-column: 3 / 4;
+}
+
+.sbg-square img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.sodbusters-video-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.sb-video-card {
+  grid-column: 3 / 4;
+}
+
+.sodbusters-page .sb-video-card video {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .sodbusters-graphics-grid,
+  .sodbusters-photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sodbusters-video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sbg-square,
+  .sb-video-card {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .sodbusters-graphics-grid,
+  .sodbusters-photo-grid,
+  .sodbusters-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sbg-square,
+  .sb-video-card {
+    grid-column: auto;
+  }
+}
