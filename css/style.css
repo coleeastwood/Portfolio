@@ -1184,3 +1184,21 @@ img {
     font-size: 2.2rem;
   }
 }
+@media (max-width: 600px) {
+  .softball-page .softball-graphics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .softball-page .sg1,
+  .softball-page .sg2,
+  .softball-page .sg3,
+  .softball-page .sg4,
+  .softball-page .sg5,
+  .softball-page .sg6,
+  .softball-page .sg7,
+  .softball-page .sg8,
+  .softball-page .sg9,
+  .softball-page .sg10 {
+    grid-column: auto;
+  }
+}
