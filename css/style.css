@@ -788,28 +788,28 @@ img {
 }
 .mallards-page .video-card video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   object-fit: cover;
   display: block;
 }
 /* SODBUSTERS PAGE */
 
-.sodbusters-graphics-grid,
-.sodbusters-photo-grid {
+.sodbusters-graphics-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
 
-.sodbusters-graphics-grid .media-card img:not([alt="Graphic Square"]),
-.sodbusters-photo-grid .media-card img {
+/* 4x5 graphics */
+.sodbusters-graphics-grid .media-card img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
+/* 🔥 FIXED: Square spans FULL row */
 .sbg-square {
-  grid-column: 3 / 4;
+  grid-column: 1 / -1;   /* full width */
 }
 
 .sbg-square img {
@@ -818,48 +818,79 @@ img {
   object-fit: cover;
 }
 
-.sodbusters-video-grid {
+
+/* PHOTOS */
+.sodbusters-photo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
 
-.sb-video-card {
-  grid-column: 3 / 4;
-}
-
-.sodbusters-page .sb-video-card video {
+.sodbusters-photo-grid img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  display: block;
 }
 
+
+/* VIDEO */
+.sodbusters-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* 🔥 FIXED: natural size (not skinny column) */
+.sodbusters-page .sb-video-card video {
+  width: 100%;
+  max-width: 900px;      /* keeps it clean + not massive */
+  margin: 0 auto;
+  display: block;
+
+  aspect-ratio: 4 / 5;   /* keeps your format */
+  object-fit: cover;
+}
+
+
+/* MOBILE */
 @media (max-width: 1100px) {
   .sodbusters-graphics-grid,
   .sodbusters-photo-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .sodbusters-video-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sbg-square,
-  .sb-video-card {
-    grid-column: 2 / 3;
-  }
 }
 
 @media (max-width: 700px) {
   .sodbusters-graphics-grid,
-  .sodbusters-photo-grid,
-  .sodbusters-video-grid {
+  .sodbusters-photo-grid {
     grid-template-columns: 1fr;
   }
+}
+/* 5 column layout */
+.five-col-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
 
-  .sbg-square,
-  .sb-video-card {
-    grid-column: auto;
-  }
+/* make all 4x5 graphics consistent */
+.five-col-grid .media-card {
+  aspect-ratio: 4 / 5;
+}
+
+/* wide graphic matches exact width of row above */
+.wide-row {
+  margin-top: 12px;
+}
+
+.wide-row .media-card {
+  width: 100%;
+  aspect-ratio: 8 / 5;
+}
+
+/* image behavior */
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
