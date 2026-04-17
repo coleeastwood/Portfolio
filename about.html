@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Cole Eastwood</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="left-links desktop-links">
+      <a href="home.html">WORK</a>
+      <span class="nav-current">ABOUT</span>
+      <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+      <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
+    </div>
+
+    <h1 class="site-title">
+      <a href="home.html">Cole Eastwood</a>
+    </h1>
+
+    <div class="right-links desktop-icons">
+      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://x.com/coleeastwood_" target="_blank" rel="noopener noreferrer">
+        <img src="images/x.png" alt="X">
+      </a>
+      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="home.html">WORK</a>
+    <span class="mobile-current">ABOUT</span>
+    <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+    <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
+
+    <div class="mobile-icons">
+      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://x.com/coleeastwood_" target="_blank" rel="noopener noreferrer">
+        <img src="images/x.png" alt="X">
+      </a>
+      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="about-page">
+  <section class="about-simple">
+    <h2 class="about-heading">I'M COLE EASTWOOD, A CREATIVE WORKING IN DESIGN, PHOTOGRAPHY AND SPORTS MEDIA.</h2>
+
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img src="images/PersonalPic.png" alt="Cole Eastwood portrait" class="about-image">
+      </div>
+
+      <div class="about-copy">
+        <p>
+          I am a senior at the University of Nebraska-Lincoln, majoring in Advertising and Public Relations, Broadcasting, Sports Media and Communication. I have a passion for photography, graphic design and social media, and am currently located in Lincoln, Nebraska.
+        </p>
+
+        <p>
+          My work is centered around sports and building visuals that feel clean, bold and engaging. Whether I am creating graphics, shooting photos, or helping manage social content, I always want the final product to connect with the athletes and brand to bolster their online presence.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+  });
+</script>
+
+</body>
+</html>

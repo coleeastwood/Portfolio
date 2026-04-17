@@ -1,3 +1,6 @@
+/* =========================================================
+   RESET / BASE
+========================================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +22,9 @@ img {
   width: 100%;
 }
 
+/* =========================================================
+   HEADER / NAV
+========================================================= */
 .site-header {
   width: 100%;
   position: relative;
@@ -99,6 +105,9 @@ img {
   opacity: 0.6;
 }
 
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 .menu-toggle {
   display: none;
   width: 34px;
@@ -153,18 +162,40 @@ img {
   margin-top: 12px;
 }
 
+.nav-current {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.5;
+  cursor: default;
+  text-decoration: none;
+}
+
+.mobile-current {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 @keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(25px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* HOME GRID */
+/* =========================================================
+   HOME PAGE GRID
+========================================================= */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -272,7 +303,9 @@ img {
   opacity: 0.9;
 }
 
-/* PROJECT / ABOUT PAGES */
+/* =========================================================
+   SHARED PAGE LAYOUT
+========================================================= */
 .project-page,
 .about-page {
   width: 100%;
@@ -345,7 +378,10 @@ img {
   margin-bottom: 12px;
 }
 
-/* GRAPHICS */
+/* =========================================================
+   SHARED MEDIA GRIDS
+========================================================= */
+/* Graphics */
 .graphics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -361,7 +397,7 @@ img {
   grid-template-columns: repeat(5, 1fr);
 }
 
-/* PHOTOGRAPHY */
+/* Photography */
 .photo-section {
   display: grid;
   gap: 12px;
@@ -389,7 +425,7 @@ img {
   object-fit: cover;
 }
 
-/* VIDEO */
+/* Video */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -408,7 +444,9 @@ img {
   display: block;
 }
 
-/* CARDS */
+/* =========================================================
+   SHARED CARDS / LIGHTBOX
+========================================================= */
 .media-card {
   display: block;
   width: 100%;
@@ -432,7 +470,6 @@ img {
   opacity: 0.9;
 }
 
-/* LIGHTBOX */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -465,7 +502,468 @@ img {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* =========================================================
+   SOFTBALL
+   Note: duplicate blocks preserved intentionally so cascade
+   stays the same as your current file.
+========================================================= */
+.softball-graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+}
+
+.portrait-graphic img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.wide-graphic img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.sg1 {
+  grid-column: 2 / 4;
+}
+
+.sg2 {
+  grid-column: 4 / 6;
+}
+
+.sg3 {
+  grid-column: 6 / 8;
+}
+
+.sg4 {
+  grid-column: 8 / 10;
+}
+
+.sg5 {
+  grid-column: 1 / 6;
+}
+
+.sg6 {
+  grid-column: 6 / 11;
+}
+
+.sg7 {
+  grid-column: 1 / 3;
+}
+
+.sg8 {
+  grid-column: 3 / 5;
+}
+
+.sg9 {
+  grid-column: 5 / 7;
+}
+
+.sg10 {
+  grid-column: 7 / 9;
+}
+
+.sg11 {
+  grid-column: 9 / 11;
+}
+
+/* later softball override */
+.softball-graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+/* Top 4 */
+.sg1 {
+  grid-column: 1 / 4;
+}
+
+.sg2 {
+  grid-column: 4 / 7;
+}
+
+.sg3 {
+  grid-column: 7 / 10;
+}
+
+.sg4 {
+  grid-column: 10 / 13;
+}
+
+/* 2 wides */
+.sg5 {
+  grid-column: 1 / 7;
+}
+
+.sg6 {
+  grid-column: 7 / 13;
+}
+
+/* Bottom 4 */
+.sg7 {
+  grid-column: 1 / 4;
+}
+
+.sg8 {
+  grid-column: 4 / 7;
+}
+
+.sg9 {
+  grid-column: 7 / 10;
+}
+
+.sg10 {
+  grid-column: 10 / 13;
+}
+
+/* image sizing override */
+.portrait-graphic img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.wide-graphic img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* softball page mobile photo fix */
+@media (max-width: 600px) {
+  .softball-page .photo-section,
+  .softball-page .photo-vertical-grid,
+  .softball-page .photo-horizontal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FOOTBALL
+========================================================= */
+.football-graphics-grid,
+.gameday-photo-grid,
+.fall-photo-grid,
+.media-day-grid,
+.recruiting-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.portrait-graphic img,
+.portrait-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wide-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recruiting-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Football graphics */
+.fg1 {
+  grid-column: 1 / 4;
+}
+
+.fg2 {
+  grid-column: 4 / 7;
+}
+
+.fg3 {
+  grid-column: 7 / 10;
+}
+
+.fg4 {
+  grid-column: 10 / 13;
+}
+
+.fg5 {
+  grid-column: 1 / 5;
+}
+
+.fg6 {
+  grid-column: 5 / 9;
+}
+
+.fg7 {
+  grid-column: 9 / 13;
+}
+
+/* Gameday */
+.gd1 {
+  grid-column: 1 / 4;
+}
+
+.gd2 {
+  grid-column: 4 / 7;
+}
+
+.gd3 {
+  grid-column: 7 / 10;
+}
+
+.gd4 {
+  grid-column: 10 / 13;
+}
+
+.gd5 {
+  grid-column: 1 / 5;
+}
+
+.gd6 {
+  grid-column: 5 / 9;
+}
+
+.gd7 {
+  grid-column: 9 / 13;
+}
+
+/* Fall */
+.f1 {
+  grid-column: 1 / 4;
+}
+
+.f2 {
+  grid-column: 4 / 7;
+}
+
+.f3 {
+  grid-column: 7 / 10;
+}
+
+.f4 {
+  grid-column: 10 / 13;
+}
+
+.f5 {
+  grid-column: 1 / 5;
+}
+
+.f6 {
+  grid-column: 5 / 9;
+}
+
+.f7 {
+  grid-column: 9 / 13;
+}
+
+/* Media day: 4 portrait, then 2 wides */
+.md1 {
+  grid-column: 1 / 4;
+}
+
+.md2 {
+  grid-column: 4 / 7;
+}
+
+.md3 {
+  grid-column: 7 / 10;
+}
+
+.md4 {
+  grid-column: 10 / 13;
+}
+
+.md5 {
+  grid-column: 1 / 7;
+}
+
+.md6 {
+  grid-column: 7 / 13;
+}
+
+/* Recruiting: original dimensions, 3 top, 2 bottom */
+.r1 {
+  grid-column: 1 / 5;
+}
+
+.r2 {
+  grid-column: 5 / 9;
+}
+
+.r3 {
+  grid-column: 9 / 13;
+}
+
+.r4 {
+  grid-column: 1 / 7;
+}
+
+.r5 {
+  grid-column: 7 / 13;
+}
+
+/* football image crop helpers */
+.crop-fix img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);
+}
+
+.shift-right img {
+  object-position: 65% center;
+}
+
+/* =========================================================
+   MALLARDS
+========================================================= */
+.mallards-page .video-card video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================================
+   SODBUSTERS
+========================================================= */
+.sodbusters-graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+/* 4x5 graphics */
+.sodbusters-graphics-grid .media-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* square spans full row */
+.sbg-square {
+  grid-column: 1 / -1;
+}
+
+.sbg-square img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* photos */
+.sodbusters-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.sodbusters-photo-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* video */
+.sodbusters-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.sodbusters-page .sb-video-card video {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* =========================================================
+   FREELANCE / FIVE-COLUMN LAYOUT
+========================================================= */
+.five-col-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.five-col-grid .media-card {
+  aspect-ratio: 4 / 5;
+}
+
+.wide-row {
+  margin-top: 12px;
+}
+
+.wide-row .media-card {
+  width: 100%;
+  aspect-ratio: 8 / 5;
+}
+
+/* image behavior override */
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+.about-simple {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 12px 30px;
+}
+
+.about-heading {
+  max-width: 1400px;
+  margin: 0 auto 42px;
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 52px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-image-wrap {
+  width: 100%;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.about-copy {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #FFFFFF;
+}
+
+.about-copy p + p {
+  margin-top: 34px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 @media (max-width: 1100px) {
   .graphics-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -481,6 +979,63 @@ img {
 
   .photo-horizontal-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .football-graphics-grid,
+  .gameday-photo-grid,
+  .fall-photo-grid,
+  .media-day-grid,
+  .recruiting-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fg1,
+  .fg2,
+  .fg3,
+  .fg4,
+  .fg5,
+  .fg6,
+  .fg7,
+  .gd1,
+  .gd2,
+  .gd3,
+  .gd4,
+  .gd5,
+  .gd6,
+  .gd7,
+  .f1,
+  .f2,
+  .f3,
+  .f4,
+  .f5,
+  .f6,
+  .f7,
+  .md1,
+  .md2,
+  .md3,
+  .md4,
+  .md5,
+  .md6,
+  .r1,
+  .r2,
+  .r3,
+  .r4,
+  .r5 {
+    grid-column: auto;
+  }
+
+  .sodbusters-graphics-grid,
+  .sodbusters-photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 380px 1fr;
+    gap: 36px;
   }
 }
 
@@ -538,6 +1093,34 @@ img {
   }
 }
 
+@media (max-width: 800px) {
+  .about-heading {
+    font-size: 1.9rem;
+    margin-bottom: 28px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .about-image-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .about-copy {
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .sodbusters-graphics-grid,
+  .sodbusters-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .header-inner {
     grid-template-columns: 34px 1fr 34px;
@@ -579,6 +1162,14 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .football-graphics-grid,
+  .gameday-photo-grid,
+  .fall-photo-grid,
+  .media-day-grid,
+  .recruiting-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
   .mobile-nav a {
     font-size: 0.95rem;
   }
@@ -592,305 +1183,4 @@ img {
     right: 16px;
     font-size: 2.2rem;
   }
-}
-.nav-current {
-  color: #FFFFFF;
-  font-size: 1.1rem;
-  font-weight: 600;
-  opacity: 0.5;
-  cursor: default;
-  text-decoration: none;
-}
-
-.mobile-current {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 1rem;
-}
-.softball-graphics-grid {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 12px;
-}
-
-.portrait-graphic img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.wide-graphic img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.sg1 { grid-column: 2 / 4; }
-.sg2 { grid-column: 4 / 6; }
-.sg3 { grid-column: 6 / 8; }
-.sg4 { grid-column: 8 / 10; }
-
-.sg5 { grid-column: 1 / 6; }
-.sg6 { grid-column: 6 / 11; }
-
-.sg7  { grid-column: 1 / 3; }
-.sg8  { grid-column: 3 / 5; }
-.sg9  { grid-column: 5 / 7; }
-.sg10 { grid-column: 7 / 9; }
-.sg11 { grid-column: 9 / 11; }
-
-.softball-graphics-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 12px;
-}
-
-/* TOP 4 */
-.sg1 { grid-column: 1 / 4; }
-.sg2 { grid-column: 4 / 7; }
-.sg3 { grid-column: 7 / 10; }
-.sg4 { grid-column: 10 / 13; }
-
-/* 2 WIDES */
-.sg5 { grid-column: 1 / 7; }
-.sg6 { grid-column: 7 / 13; }
-
-/* BOTTOM 4 */
-.sg7  { grid-column: 1 / 4; }
-.sg8  { grid-column: 4 / 7; }
-.sg9  { grid-column: 7 / 10; }
-.sg10 { grid-column: 10 / 13; }
-
-/* IMAGE SIZING */
-.portrait-graphic img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.wide-graphic img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.football-graphics-grid,
-.gameday-photo-grid,
-.fall-photo-grid,
-.media-day-grid,
-.recruiting-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 12px;
-}
-
-.portrait-graphic img,
-.portrait-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.wide-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.recruiting-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* GRAPHICS */
-.fg1 { grid-column: 1 / 4; }
-.fg2 { grid-column: 4 / 7; }
-.fg3 { grid-column: 7 / 10; }
-.fg4 { grid-column: 10 / 13; }
-
-.fg5 { grid-column: 1 / 5; }
-.fg6 { grid-column: 5 / 9; }
-.fg7 { grid-column: 9 / 13; }
-
-/* GAMEDAY */
-.gd1 { grid-column: 1 / 4; }
-.gd2 { grid-column: 4 / 7; }
-.gd3 { grid-column: 7 / 10; }
-.gd4 { grid-column: 10 / 13; }
-
-.gd5 { grid-column: 1 / 5; }
-.gd6 { grid-column: 5 / 9; }
-.gd7 { grid-column: 9 / 13; }
-
-/* FALL */
-.f1 { grid-column: 1 / 4; }
-.f2 { grid-column: 4 / 7; }
-.f3 { grid-column: 7 / 10; }
-.f4 { grid-column: 10 / 13; }
-
-.f5 { grid-column: 1 / 5; }
-.f6 { grid-column: 5 / 9; }
-.f7 { grid-column: 9 / 13; }
-
-/* MEDIA DAY: 4 portrait, then 2 wides */
-.md1 { grid-column: 1 / 4; }
-.md2 { grid-column: 4 / 7; }
-.md3 { grid-column: 7 / 10; }
-.md4 { grid-column: 10 / 13; }
-
-.md5 { grid-column: 1 / 7; }
-.md6 { grid-column: 7 / 13; }
-
-/* RECRUITING: original dimensions, 3 top, 2 bottom */
-.r1 { grid-column: 1 / 5; }
-.r2 { grid-column: 5 / 9; }
-.r3 { grid-column: 9 / 13; }
-
-.r4 { grid-column: 1 / 7; }
-.r5 { grid-column: 7 / 13; }
-
-@media (max-width: 1100px) {
-  .football-graphics-grid,
-  .gameday-photo-grid,
-  .fall-photo-grid,
-  .media-day-grid,
-  .recruiting-photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .fg1, .fg2, .fg3, .fg4, .fg5, .fg6, .fg7,
-  .gd1, .gd2, .gd3, .gd4, .gd5, .gd6, .gd7,
-  .f1, .f2, .f3, .f4, .f5, .f6, .f7,
-  .md1, .md2, .md3, .md4, .md5, .md6,
-  .r1, .r2, .r3, .r4, .r5 {
-    grid-column: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .football-graphics-grid,
-  .gameday-photo-grid,
-  .fall-photo-grid,
-  .media-day-grid,
-  .recruiting-photo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* Targeted crop fix */
-.crop-fix img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.08);
-}
-.shift-right img {
-  object-position: 65% center;
-}
-.mallards-page .video-card video {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  display: block;
-}
-/* SODBUSTERS PAGE */
-
-.sodbusters-graphics-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
-
-/* 4x5 graphics */
-.sodbusters-graphics-grid .media-card img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-/* 🔥 FIXED: Square spans FULL row */
-.sbg-square {
-  grid-column: 1 / -1;   /* full width */
-}
-
-.sbg-square img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
-
-/* PHOTOS */
-.sodbusters-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
-
-.sodbusters-photo-grid img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-
-/* VIDEO */
-.sodbusters-video-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-/* 🔥 FIXED: natural size (not skinny column) */
-.sodbusters-page .sb-video-card video {
-  width: 100%;
-  max-width: 900px;      /* keeps it clean + not massive */
-  margin: 0 auto;
-  display: block;
-
-  aspect-ratio: 4 / 5;   /* keeps your format */
-  object-fit: cover;
-}
-
-
-/* MOBILE */
-@media (max-width: 1100px) {
-  .sodbusters-graphics-grid,
-  .sodbusters-photo-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .sodbusters-graphics-grid,
-  .sodbusters-photo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* 5 column layout */
-.five-col-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
-
-/* make all 4x5 graphics consistent */
-.five-col-grid .media-card {
-  aspect-ratio: 4 / 5;
-}
-
-/* wide graphic matches exact width of row above */
-.wide-row {
-  margin-top: 12px;
-}
-
-.wide-row .media-card {
-  width: 100%;
-  aspect-ratio: 8 / 5;
-}
-
-/* image behavior */
-.media-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
