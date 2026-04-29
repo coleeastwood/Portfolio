@@ -91,8 +91,7 @@ img {
   gap: 18px;
 }
 
-.right-links a,
-.mobile-icons a {
+.right-links a {
   width: 34px;
   height: 34px;
   display: flex;
@@ -109,7 +108,7 @@ img {
 
 .right-links a:hover,
 .mobile-icons a:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 /* =========================================================
@@ -156,22 +155,34 @@ img {
   font-weight: 600;
   padding: 14px 0;
   text-align: center;
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
 }
 
 .mobile-nav a:hover {
   text-decoration: underline;
+  opacity: 1;
 }
 
 .mobile-icons {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin-top: 16px;
+  gap: 28px;
+  margin-top: 20px;
 }
 
 .mobile-icons a {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-icons a:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .mobile-icons img {
@@ -182,9 +193,9 @@ img {
 
 .nav-current {
   color: #FFFFFF;
-  font-size: 1.1rem;
-  font-weight: 600;
-  opacity: 0.5;
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 1;
   cursor: default;
   text-decoration: none;
 }
@@ -192,8 +203,10 @@ img {
 .mobile-current {
   display: block;
   text-align: center;
-  padding: 10px 0;
-  font-size: 1rem;
+  padding: 14px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 1;
 }
 
 /* =========================================================
@@ -1247,13 +1260,13 @@ img {
   }
 
   .mobile-icons {
-    gap: 22px;
-    margin-top: 16px;
+    gap: 28px;
+    margin-top: 20px;
   }
 
   .mobile-icons a {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
   }
 
   .lightbox {
