@@ -412,7 +412,6 @@ img {
 /* =========================================================
    SHARED MEDIA GRIDS
 ========================================================= */
-/* Graphics */
 .graphics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -428,7 +427,6 @@ img {
   grid-template-columns: repeat(5, 1fr);
 }
 
-/* Photography */
 .photo-section {
   display: grid;
   gap: 12px;
@@ -456,7 +454,6 @@ img {
   object-fit: cover;
 }
 
-/* Video */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -596,14 +593,12 @@ img {
   grid-column: 9 / 11;
 }
 
-/* later softball override */
 .softball-graphics-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 12px;
 }
 
-/* Top 4 */
 .sg1 {
   grid-column: 1 / 4;
 }
@@ -620,7 +615,6 @@ img {
   grid-column: 10 / 13;
 }
 
-/* 2 wides */
 .sg5 {
   grid-column: 1 / 7;
 }
@@ -629,7 +623,6 @@ img {
   grid-column: 7 / 13;
 }
 
-/* Bottom 4 */
 .sg7 {
   grid-column: 1 / 4;
 }
@@ -646,7 +639,6 @@ img {
   grid-column: 10 / 13;
 }
 
-/* image sizing override */
 .portrait-graphic img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -659,7 +651,6 @@ img {
   object-fit: cover;
 }
 
-/* softball page mobile photo fix */
 @media (max-width: 600px) {
   .softball-page .photo-section,
   .softball-page .photo-vertical-grid,
@@ -701,7 +692,6 @@ img {
   display: block;
 }
 
-/* Football graphics */
 .fg1 {
   grid-column: 1 / 4;
 }
@@ -730,7 +720,6 @@ img {
   grid-column: 9 / 13;
 }
 
-/* Gameday */
 .gd1 {
   grid-column: 1 / 4;
 }
@@ -759,7 +748,6 @@ img {
   grid-column: 9 / 13;
 }
 
-/* Fall */
 .f1 {
   grid-column: 1 / 4;
 }
@@ -788,7 +776,6 @@ img {
   grid-column: 9 / 13;
 }
 
-/* Media day: 4 portrait, then 2 wides */
 .md1 {
   grid-column: 1 / 4;
 }
@@ -813,7 +800,6 @@ img {
   grid-column: 7 / 13;
 }
 
-/* Recruiting: original dimensions, 3 top, 2 bottom */
 .r1 {
   grid-column: 1 / 5;
 }
@@ -834,7 +820,6 @@ img {
   grid-column: 7 / 13;
 }
 
-/* football image crop helpers */
 .crop-fix img {
   width: 100%;
   height: 100%;
@@ -931,7 +916,7 @@ img {
 }
 
 /* =========================================================
-   NEW FREELANCE / FOUR-COLUMN IMAGE GRID
+   FREELANCE / FOUR-COLUMN IMAGE GRID
 ========================================================= */
 .four-col-grid {
   display: grid;
@@ -950,7 +935,49 @@ img {
 }
 
 /* =========================================================
-   NEW FREELANCE / YOUTUBE VIDEO GRID
+   FREELANCE / IDENTITY GRID
+========================================================= */
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.identity-grid .media-card {
+  aspect-ratio: 16 / 9;
+}
+
+.identity-grid .media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   FREELANCE / BAREFOOT GRID
+========================================================= */
+.barefoot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.barefoot-vertical {
+  aspect-ratio: 4 / 5;
+}
+
+.barefoot-horizontal {
+  aspect-ratio: 3 / 2;
+}
+
+.barefoot-grid .media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   FREELANCE / YOUTUBE VIDEO GRID
 ========================================================= */
 .youtube-grid {
   display: grid;
@@ -971,7 +998,6 @@ img {
   display: block;
 }
 
-/* image behavior override */
 .media-card img {
   width: 100%;
   height: 100%;
@@ -1095,7 +1121,12 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .four-col-grid {
+  .four-col-grid,
+  .identity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .barefoot-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1166,7 +1197,12 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .four-col-grid {
+  .four-col-grid,
+  .identity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .barefoot-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1242,6 +1278,8 @@ img {
   .photo-horizontal-grid,
   .video-grid,
   .four-col-grid,
+  .identity-grid,
+  .barefoot-grid,
   .youtube-grid {
     grid-template-columns: 1fr;
   }
