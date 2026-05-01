@@ -24,7 +24,7 @@
     <div class="left-links desktop-links">
       <a href="home.html">WORK</a>
       <a href="about.html">ABOUT</a>
-      <a href="https://drive.google.com/file/d/1WBCW39ScZsbsp1K0RFegNKdpcOR8O7qZ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+      <a href="resume.html" target="_blank" rel="noopener noreferrer">RESUME</a>
       <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
     </div>
 
@@ -49,7 +49,7 @@
   <div class="mobile-nav" id="mobile-nav">
     <a href="home.html">WORK</a>
     <a href="about.html">ABOUT</a>
-    <a href="https://drive.google.com/file/d/1sUe-7GDqn72IWDgbH1XhfwvknplfdraJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+    <a href="resume.html" target="_blank" rel="noopener noreferrer">RESUME</a>
     <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
 
     <div class="mobile-icons">
@@ -125,23 +125,23 @@
   </section>
 
   <!-- VIDEO -->
-  <section class="media-section">
-    <p class="section-label">Video</p>
+<section class="media-section">
+  <p class="section-label">Video</p>
 
-    <div class="video-grid">
-      <div class="video-card">
-        <video controls playsinline preload="metadata">
-          <source src="mensgolfimages/Video11.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="video-card">
-        <video controls playsinline preload="metadata">
-          <source src="mensgolfimages/Video22.mp4" type="video/mp4">
-        </video>
-      </div>
+  <div class="video-grid">
+    <div class="video-card">
+      <video controls playsinline preload="metadata" poster="mensgolfimages/Video11Poster.jpg">
+        <source src="mensgolfimages/Video11.mp4" type="video/mp4">
+      </video>
     </div>
-  </section>
+
+    <div class="video-card">
+      <video controls playsinline preload="metadata" poster="mensgolfimages/Video22Poster.jpg">
+        <source src="mensgolfimages/Video22.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 </main>
 
@@ -171,26 +171,6 @@
 
   lightboxClose.addEventListener("click", () => {
     lightbox.classList.remove("show");
-  });
-
-  // AUTO VIDEO THUMBNAILS
-  const videos = document.querySelectorAll("video");
-
-  videos.forEach((video) => {
-    video.addEventListener("loadeddata", () => {
-      video.currentTime = 0.5;
-
-      video.addEventListener("seeked", () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-        video.setAttribute("poster", canvas.toDataURL());
-      }, { once: true });
-    });
   });
 </script>
 
