@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PDF Viewer | Cole Eastwood</title>
+  <title>Resume | Cole Eastwood</title>
 
   <link rel="icon" type="image/png" href="images/logo.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="header-inner">
 
-    <button class="menu-toggle" type="button">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <div class="left-links desktop-links">
-    <span class="nav-current">RESUME</span>
       <a href="home.html">WORK</a>
       <a href="about.html">ABOUT</a>
-      <a href="resume.html" target="_blank">RESUME</a>
-      <a href="https://gondola.cc/coleeastwood_" target="_blank">GONDOLA</a>
+      <span class="nav-current">RESUME</span>
+      <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
     </div>
 
     <h1 class="site-title">
@@ -34,34 +34,33 @@
     </h1>
 
     <div class="right-links desktop-icons">
-      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank">
+      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
         <img src="images/instagram.png" alt="Instagram">
       </a>
-      <a href="https://x.com/coleeastwood_" target="_blank">
+      <a href="https://x.com/coleeastwood_" target="_blank" rel="noopener noreferrer">
         <img src="images/x.png" alt="X">
       </a>
-      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank">
+      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank" rel="noopener noreferrer">
         <img src="images/linkedin.png" alt="LinkedIn">
       </a>
     </div>
 
   </div>
 
-  <div class="mobile-nav">
-    <span class="mobile-current">RESUME</span>
+  <div class="mobile-nav" id="mobile-nav">
     <a href="home.html">WORK</a>
     <a href="about.html">ABOUT</a>
-    <a href="resume.html" target="_blank">RESUME</a>
-    <a href="https://gondola.cc/coleeastwood_" target="_blank">GONDOLA</a>
+    <span class="mobile-current">RESUME</span>
+    <a href="https://gondola.cc/coleeastwood_" target="_blank" rel="noopener noreferrer">GONDOLA</a>
 
     <div class="mobile-icons">
-      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank">
+      <a href="https://www.instagram.com/eastwood.visuals/" target="_blank" rel="noopener noreferrer">
         <img src="images/instagram.png" alt="Instagram">
       </a>
-      <a href="https://x.com/coleeastwood_" target="_blank">
+      <a href="https://x.com/coleeastwood_" target="_blank" rel="noopener noreferrer">
         <img src="images/x.png" alt="X">
       </a>
-      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank">
+      <a href="https://www.linkedin.com/in/cole-eastwood-26163125a/" target="_blank" rel="noopener noreferrer">
         <img src="images/linkedin.png" alt="LinkedIn">
       </a>
     </div>
@@ -75,6 +74,7 @@
   </div>
 
   <section class="project-intro">
+    <p class="project-kicker">Document</p>
     <h2 class="project-name">Resume</h2>
     <p class="project-meta">2026</p>
     <p class="project-text">
@@ -84,8 +84,8 @@
 
   <section class="media-section">
     <div class="pdf-embed">
-      <iframe 
-        src="https://drive.google.com/file/d/1h7SrlnDCla77g0YwyTnQbNe92wduDqFU/view"
+      <iframe
+        src="https://drive.google.com/file/d/1h7SrlnDCla77g0YwyTnQbNe92wduDqFU/preview"
         allow="autoplay">
       </iframe>
     </div>
@@ -99,6 +99,9 @@
 
   menuToggle.addEventListener("click", () => {
     mobileNav.classList.toggle("show");
+
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
   });
 </script>
 
