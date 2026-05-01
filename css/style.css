@@ -1054,6 +1054,61 @@ img {
 }
 
 /* =========================================================
+   PDF EMBED
+========================================================= */
+.pdf-fullscreen {
+  width: 100%;
+  height: 100vh;
+}
+
+.pdf-fullscreen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+.contact-cta {
+  width: 100%;
+  padding: 30px 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-row {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-left,
+.contact-right {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.contact-button:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+/* =========================================================
    RESPONSIVE
 ========================================================= */
 @media (max-width: 1100px) {
@@ -1237,6 +1292,17 @@ img {
   .sodbusters-photo-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .contact-left,
+  .contact-right {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1316,6 +1382,16 @@ img {
     right: 16px;
     font-size: 2.2rem;
   }
+
+  .contact-cta {
+    padding: 24px 18px 32px;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1335,62 +1411,4 @@ img {
   .softball-page .sg10 {
     grid-column: auto;
   }
-}
-/* =========================================================
-   FULL PAGE PDF EMBED
-========================================================= */
-.pdf-full {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.pdf-full iframe {
-  width: 100%;
-  height: 90vh; /* fills screen height */
-  border: none;
-  background: #000;
-}
-/* =========================================================
-   CONTACT CTA
-========================================================= */
-.contact-cta {
-  width: 100%;
-  padding: 60px 20px 80px;
-  text-align: center;
-}
-
-.contact-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contact-text {
-  font-size: 1.1rem;
-  opacity: 0.7;
-  margin-bottom: 20px;
-}
-
-.contact-button {
-  display: inline-block;
-  padding: 14px 26px;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease;
-}
-
-.contact-button:hover {
-  background: #FFFFFF;
-  color: #000000;
-}
-
-.contact-email {
-  margin-top: 18px;
-  font-size: 0.95rem;
-  opacity: 0.6;
 }
